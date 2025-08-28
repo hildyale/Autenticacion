@@ -8,7 +8,7 @@ import reactor.core.publisher.Mono;
 import java.math.BigInteger;
 
 // TODO: This file is just an example, you should delete or modify it
-public interface MyReactiveRepository extends ReactiveCrudRepository<UserEntity, BigInteger>, ReactiveQueryByExampleExecutor<UserEntity> {
+public interface UserRepository extends ReactiveCrudRepository<UserEntity, BigInteger>, ReactiveQueryByExampleExecutor<UserEntity> {
 
     Mono<UserEntity> findByDni(String dni);
 

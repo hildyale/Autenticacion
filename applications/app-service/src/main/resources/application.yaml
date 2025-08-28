@@ -1,5 +1,7 @@
 server:
   port: 8080
+  error:
+    include-message: always
 spring:
   application:
     name: "Autenticacion"
@@ -21,4 +23,14 @@ management:
       probes:
         enabled: true
 cors:
-  allowed-origins: "http://localhost:4200,http://localhost:8080"
+  allowed-origins: "http://localhost:4200,http://localhost:8080,http://localhost:8081"
+
+adapters:
+  r2dbc:
+   url: r2dbc:postgresql://localhost:5432/BD Autenticacion
+   username: postgres
+   password: admin
+   host: localhost
+   port: 5432
+   database: BD Autenticacion
+   schema: public
